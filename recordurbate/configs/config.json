@@ -5,5 +5,7 @@
     "rate_limit": true,
     "rate_limit_time": 5,
     "default_export_location": "./list.txt",
+    "pid_path": "/var/run/recordubate.pid",
+    "log_path": "/var/log/recordubate.log",
     "streamers": []
 }

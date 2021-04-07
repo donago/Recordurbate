@@ -2,7 +2,7 @@ import json
 import sys
 
 
-config_loc = "configs/config.json"
+config_loc = "/etc/recordubate.json"
 
 
 # opens file, returns json dict, returns None if error

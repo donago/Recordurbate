@@ -17,7 +17,13 @@ class Daemon:
     pidfile = "./configs/rb.pid"
     logfile = "./configs/rb.log"
 
-    def __init__(self):
+    def __init__(self, pidfile, logfile):
+        if pidfile:
+            self.pidfile = pidfile
+
+        if logfile:
+            self.logfile = logfile
+
         # setup logger
         self.logger = logging.getLogger("Recordurbate")
         self.logger.setLevel(logging.DEBUG)

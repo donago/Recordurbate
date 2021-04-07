@@ -104,9 +104,12 @@ def export_streamers():
 
 def bot():
     if not check_num_args(2): return
-    
+
+    # load config
+    config = Config.load_config()
+
     # make daemon inst
-    daemon = Daemon()
+    daemon = Daemon(config["pid_path"], config["log_path"])
 
     # start, stop or restart
     if sys.argv[1] == "start":
